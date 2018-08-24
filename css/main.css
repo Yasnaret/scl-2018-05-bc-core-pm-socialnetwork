@@ -1,0 +1,460 @@
+body {
+	background: #a6a9a5;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+}
+
+a {color: #5f3955;}
+a:hover {text-decoration: underline;
+		color: #c8c81f
+}
+
+/* --- --- HEADER --- --- */
+header {
+	background-image: url(/img/header.jpg);
+	padding: 10px 0;
+}
+
+/* LOGO */
+header .logo img {
+	height: 32px;
+}
+
+/* BUSCAR */
+header .buscar form input[type="text"]{
+	width: 100%;
+	background: #443f3f;
+	border: none;
+	font-size: 12px;
+	padding: 0 10px;
+	height: 25px;
+	line-height: 25px;
+	border-radius: 3px 0 0 3px;
+	color: #faf3f3;
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+
+header .buscar form button {
+	width: 100%;
+	background: #e4a25d;
+	border: 1px solid  #5f444f;
+	font-size: 12px;
+	padding: 0 10px;
+	height: 25px;
+	line-height: 25px;
+	border-radius: 0 3px 3px 0;
+	cursor: pointer;
+	color: #6d6d6d;
+}
+
+header .buscar form button:hover {
+	background: #c8c81f;
+	color: #fff;
+}
+
+/* MENU */
+header .menu {
+	padding: 0;
+}
+
+header .menu a {
+	color: rgba(255,255,255,.8);
+	text-decoration: none;
+}
+
+header .menu a:hover {
+	color: #fff;
+}
+
+header .menu .imagen {
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+}
+
+header .menu .imagen img {
+	border-radius: 100px;
+	height: 200%;
+    width: 200%;
+}
+
+/* --- --- MAIN --- --- */
+main {
+	padding-top: 20px;
+}
+
+/* BARRA IZQUIERDA */
+main .barra-lateral-izquierda {
+	padding-bottom: 10px;
+	padding-left: 0;
+}
+
+main .barra-lateral-izquierda nav {
+	border-bottom: 1px solid #c7c8ca;
+	padding-bottom: 20px;
+}
+
+main .barra-lateral-izquierda nav a {
+	display: block;
+	padding: 3px 3px;
+	font-family: 'Roboto', sans-serif;
+	color: #3d3c3c;
+}
+
+main .barra-lateral-izquierda nav a:hover {
+	background: #c8c81f65;
+	text-decoration: none;
+}
+
+main .barra-lateral-izquierda nav a i {
+	margin-right: 10px;
+}
+
+/* --- --- CONTENIDO PRINCIPAL --- --- */
+/* --- --- PUBLICAR --- --- */
+main .contenido-principal .publicar {
+	margin-bottom: 20px;
+}
+
+main .contenido-principal .publicar .foto {
+	padding-left: 15px;
+}
+
+main .contenido-principal .publicar .foto a {
+	width: 60px;
+	height: 60px;
+	display: inline-block;
+	overflow: hidden;
+	border-radius: 100px;
+	margin-top: 20px;
+}
+
+main .contenido-principal .publicar .foto img {
+	width: 100%;
+}
+
+main .contenido-principal .publicar form textarea {
+	width: 100%;
+	max-width: 100%;
+	min-height: 100px;
+	max-height: 300px;
+	border: none;
+	padding: 15px;
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	color: #565656;
+	box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.35);
+	background-color: #e9e6f5;
+}
+
+main .contenido-principal .publicar form .contenedor-botones {
+	padding: 20px 0;
+	border-bottom: 1px solid #c7c8ca;
+}
+
+main .contenido-principal .publicar form .contenedor-botones a {
+	color: #8d8d8d;
+	font-size: 20px;
+	margin-right: 10px;
+}
+
+main .contenido-principal .publicar form .contenedor-botones a:hover {
+	color: #3d3c3c;
+}
+
+main .contenido-principal .publicar form button {
+	border: 1px solid  #5f444f;
+	padding: 5px 30px;
+	font-size: 14px;
+	font-family: 'Roboto', sans-serif;
+	background: linear-gradient(to bottom, #e4a25d 0%, #e9953c 100%);
+	color: rgb(41, 35, 35);
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+main .contenido-principal .publicar form button:hover {
+	background: linear-gradient(to bottom, #c68745 0%, #ad6f3d 100%);
+}
+
+/* --- PUBLICACIONES --- */
+main .publicacion {
+	margin-bottom: 40px;
+}
+
+main .publicacion .foto {
+	padding-left: 15px;
+	margin-right: 15px;
+}
+
+main .publicacion .foto a {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	overflow: hidden;
+	border-radius: 100px;
+}
+
+main .publicacion .foto a img {
+	width: 100%;
+}
+
+main .publicacion .nombre {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	line-height: 16px;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+main .publicacion .texto {
+	background: #fff;
+	color: #3d3c3c;
+	font-size: 14px;
+	padding: 15px;
+	margin-bottom: 15px;
+}
+
+main .publicacion .imagen {
+	padding: 15px;
+	background: #fff;
+	margin-bottom: 15px;
+}
+
+main .publicacion .imagen img {
+	width: 100%;
+}
+
+main .publicacion .caja-botones {
+	margin-bottom: 20px;
+}
+
+main .publicacion .post .caja-botones button {
+	background:  #906332;
+	color: #fff;
+	cursor: pointer;
+	padding: 10px 20px;
+	display: inline-block;
+	font-size: 18px;
+	line-height: 18px;
+	border-radius: 4px;
+	border: 1px solid #c68745
+}
+
+main .publicacion .post .caja-botones button:hover {
+	background: #c8c81f 0%, #7e7e10e3 100%s ;
+}
+
+main .publicacion .post .caja-botones p {
+	margin-bottom: 0;
+	color: #462b1ee7;
+}
+
+/* --- COMENTARIOS --- */
+main .publicacion .comentario {
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #cbcbcb;
+}
+
+main .publicacion .comentario .foto {
+	padding-left: 0;
+	margin-right: 15px;
+}
+
+main .publicacion .comentario .foto a {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+}
+
+main .publicacion .comentario form textarea {
+	width: 100%;
+	background-color: #e9e6f5;
+	border:1px solid #cbcbcb;
+	color: #565656;
+	padding: 8px;
+	min-height: 40px;
+	height: 40px;
+	min-width: 100%;
+	max-width: 100%;
+	font-size: 14px;
+}
+
+main .publicacion .comentario .respuesta  {
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+main .publicacion .comentario .me-gusta {
+	font-size: 14px;
+}
+
+/* --- --- BARRA DERECHA --- --- */
+main .barra-lateral-derecha h3 {
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+}
+
+main .barra-lateral-derecha .ads {
+	/*margin-bottom: 20px;*/
+}
+
+main .barra-lateral-derecha .ads a {
+	margin-bottom: 15px;
+	display: inline-block;
+}
+
+main .barra-lateral-derecha .ads a img {
+	width: 100%;
+}
+
+/* --- --- FOOTER --- --- */
+main footer {
+	font-size: 14px;
+	font-family: 'Roboto', sans-serif;
+}
+
+main footer a {
+	color: #1176b6;
+	line-height: 14px;
+	margin-right: 10px;
+}
+
+main footer .copyright {
+	color: #919191;
+	margin-top: 10px;
+}
+
+button.comenta{
+border: 1px solid #5f444f;
+padding: 5px 30px;
+font-size: 14px;
+font-family: 'Roboto', sans-serif;
+background: linear-gradient(to bottom, #e4a25d 0%, #e9953c 100%);
+color: rgb(41, 35, 35);
+border-radius: 3px;
+cursor: pointer;
+}
+
+button.cierra{
+	border: 1px solid #5f444f;
+	padding: 5px 10px;
+	font-size: 14px;
+	font-family: 'Roboto', sans-serif;
+	background: linear-gradient(to bottom, #e4a25d 0%, #e9953c 100%);
+	color: rgb(41, 35, 35);
+	border-radius: 3px;
+	cursor: pointer;
+	}
+#file-label{
+	  padding-bottom: 7px;
+    background-color: #e0e6f3cf;
+ }
+
+ 
+#write-posts {
+	resize: none;
+}	
+
+
+/* --- --- MEDIAQUERIES --- --- */
+@media screen and (max-width: 767px) {
+	main .btn-menu {
+		display: block;
+		border: 1px solid #5f444f;
+		padding: 5px 10px;
+		font-size: 14px;
+		background: linear-gradient(to bottom, #e4a25d 0%, #e9953c 100%);
+		color: rgb(41, 35, 35);
+		border-radius: 3px;
+		cursor: pointer;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	main .btn-menu:hover {
+		background: #c8c81f;
+		text-decoration: none;
+	}
+
+	main .fondo-enlace {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		cursor: pointer;
+		background: rgba(0,0,0,.5);
+		z-index:99;
+		display: none;
+	}
+
+	main .fondo-enlace.active {
+		display: block;
+	}
+
+	main .barra-lateral-izquierda {
+		width: 85%;
+		position: fixed;
+		background: rgba(0,0,0,.85);
+		z-index: 100;
+		top: 0;
+		left: 0;
+		padding: 0;
+		margin: 0;
+		height: 100vh;
+		transform: translateX(-100%);
+		transition: all .3s ease;
+		overflow: scroll;
+	}
+
+	main .barra-lateral-izquierda.active {
+		transform: translateX(0%);
+	}
+
+	main .barra-lateral-izquierda nav {
+		border-bottom: none;
+	}
+
+	main .barra-lateral-izquierda nav a {
+		padding: 20px;
+		color: #fff;
+	}
+
+	main .barra-lateral-izquierda nav a:hover {
+		color: #3d3c3c;
+		background: #c8c81f;
+	}
+
+@media screen and (max-width: 575px) {
+	header .menu {
+		padding: 0 15px 15px 15px;
+	}
+
+	main .contenido-principal .publicar .foto a {
+		width: 40px;
+		height: 40px;
+		margin:0;
+	}
+
+	main .publicacion .foto a {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+.post{
+	list-style-image: url("https://image.flaticon.com/icons/svg/680/680949.svg");
+	list-style-position: inside;
+}
+
+@media screen and (max-width: 320px) {
+	main .contenido-principal .publicar .foto {
+		display: none;
+	}
+}
+}

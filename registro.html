@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trabún-RedSocial</title>
+    <link rel="stylesheet" href="css/registro.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/fontello2.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="login-form">
+          <!-- Formulario de registro de nuevos usuarios -->
+    <main class="container">
+    <form class="max400 mt-5 mx-auto text-center">
+        <div id="centrador2">
+            <img id="imagen" src="/img/logo.png">
+        </div>
+        <h4 class="text-center">T r a b ú n </h4>
+        <div class="or-seperator"></div>
+      <div class="form-row">
+        <div class="col-6">
+          <input type="text" id="inputNombre" class="form-control2 " placeholder="Nombre" tabindex="0" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Aquí tu nombre." required>            
+        </div>
+        <div class="col-6">
+          <input type="text" id="inputApellido" class="form-control2 " placeholder="Apellido" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Aquí tu apellido." required>
+        </div>
+        <div class="or-seperator"></div>
+      </div>
+      <div class="form-group mt-3">
+        <input type="email" id="inputEmail" class="form-control2 " placeholder="Correo electrónico" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Escribe una dirección de correo válida." required>
+      </div>
+      <div class="form-group">
+        <input type="password" id="inputPassword" class="form-control2 " placeholder="Contraseña" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Tu contraseña debe tener al menos 6 carácteres entre letras y números." required>
+      </div>
+      <button type="button" id="btnCrearCuenta" class="btn btn-success btn-block login-btn" onclick="register()">Crear Mi Cuenta </button>
+      <div class="or-seperator">
+          <i>Ya tengo una cuenta</i>
+          <a href="loginv2.html" type="button" id="reg-btn" class="btn btn-success btn-block login-btn">Volver</a>
+      </div>
+      
+    </form>
+    </main>
+
+    </div>
+    	<!-- conexion a Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+	<script>
+	  var config = {
+    apiKey: "AIzaSyAWALtnmZiS_d4KhjIc79op-M8D4KDYNLo",
+    authDomain: "trabun-socialmedia.firebaseapp.com",
+    databaseURL: "https://trabun-socialmedia.firebaseio.com",
+    projectId: "trabun-socialmedia",
+    storageBucket: "trabun-socialmedia.appspot.com",
+    messagingSenderId: "85322774721"
+  	};
+	  firebase.initializeApp(config);
+    </script> 
+    <script src="js/loginv2.js"></script>
+    <script src="js/registro.js"></script>
+  
+</body>
+
+</html>

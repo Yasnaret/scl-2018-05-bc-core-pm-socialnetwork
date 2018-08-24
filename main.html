@@ -1,0 +1,344 @@
+<!DOCTYPE html>	
+<html lang="en">	
+<head>	
+	<meta charset="UTF-8">	
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">	
+	<title>TRABúN</title>	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">	
+	<link rel="stylesheet" href="css/fontello2.css">	
+	<link rel="stylesheet" href="css/fontello.css">	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/bootstrap.min.1.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">	
+	<link rel="stylesheet" href="css/main.css">	
+	
+</head>	
+<body>	
+	<header>
+		<div class="container">	
+			<div class="row justify-content-start">	
+				<div class="col-auto logo hidden-sm-down">	
+					<a href="#">	
+						<img src="img/logo.png" width="30" height="40" alt="">	
+					</a>	
+				</div>	
+				<div class="col-12 col-sm-8 col-lg-6 flex-last flex-sm-unordered buscar">	
+					<form action="">	
+						<div class="row no-gutters align-items-center">	
+							<div class="columna col-10">	
+								<input type="text" id="textoSearch" placeholder="Productores,Amigos,Recetas Para Compartir">	
+							</div>	
+							<div class="columna col-2">	
+								<button><i class="icon-search"></i></button>	
+							</div>	
+						</div>	
+					</form>	
+				</div>	
+				<nav class="col-12 col-sm-3 col-lg-2 menu d-flex justify-content-between ml-auto">	
+					<a href="#"><i class="icon-users logo-header"></i></a>	
+					<a href="#"><i class="icon-food logo-header"></i></a>	
+					<a href="#"><i class="icon-chat logo header"></i></a>	
+					<a href="perfil.html" class="imagen"><img id="imagenDePerfil"src="img/persona2.jpg" width="32" height="32" alt=""></a>
+					<button class="cierra" onclick="signOutClose()"><i class="fas fa-sign-out-alt"></i>Salir</button>	
+				</nav>	
+			</div>	
+		</div>	
+	</header>	
+	
+	<main class="container">	
+		<div class="row">	
+			<div class="col-12 col-md-3 barra-lateral-izquierda" id="barra-lateral-izquierda">	
+				<nav>	
+					<a href="perfil.html"><i class="icon-user-o"></i>Mi Perfil</a>	
+					<a href="#"><i class="icon-users"></i> Amigos</a>	
+					<a href="#"><i class="icon-mail"></i> Mensajes Privados</a>	
+					<a href="#"><i class=" icon-handshake-o"></i> Productores</a>	
+					<a href="#"><i class="icon-food"></i> Recetas</a>	
+					
+				</nav>	
+			</div>	
+	
+			<a href="#" class="fondo-enlace hidden-md-up" id="fondo-enlace"></a>	
+	
+			<div class="col contenido-principal">	
+				<div class="publicar">	
+					<div class="row">	
+						<div class="col">	
+							<a href="#" class="btn-menu hidden-md-up d-flex justify-content-between" id="btn-menu">	
+								<span>Menu</span>	
+								<i class="icon-menu"></i>	
+							</a>	
+						</div>	
+					</div>	
+	
+					<div class="row justify-content-center">	
+						<div class="col-auto foto">	
+							<a href="#">	
+								<img src="img/persona2.jpg" alt="">	
+							</a>	
+						</div>	
+						<div class="col">	
+<!-- -------------------------------------------------------------------							 -->
+							<!-- <form action="">	
+								<textarea name="mensaje" id="cajaPost" placeholder="Publicar Mensaje"></textarea>	
+								<div class="contenedor-botones d-flex justify-content-between">	
+									<div class="media">	
+										<a href="#"><i class="icon-picture"></i></a>	
+										<a href="#"><i class="icon-play"></i></a>	
+									</div>	
+									<div>	
+										<button id="comparte">Comparte</button>	
+									</div>	
+								</div>	
+							</form>	 -->
+<!-- --------------------------------------------------------------------------------------------- -->
+						<!-- inicio de post con firebase -->
+						<div class="share-box col-12 col-md-6 col-lg-6 mb-3">
+								<div class="card">
+								  <div class="card-body">
+									<form id="create-post">
+									  <div class="form-group">
+										<label for="exampleFormControlTextarea1" class="sr-only">Create new post</label>
+										<textarea id="write-posts" class="form-control" placeholder="¿Que quieres compartir?" rows="3" autofocus></textarea>
+									  </div>
+									  <div class="form-row mb-0">
+										<div class="custom-file col">
+										  <label id="file-label" for="file" class="btnCamara">
+											<input type="file" name="file" value="" class="custom-file-input d-none" id="file" accept="image/*">                        
+											<i class="fas fa-camera-retro"></i>
+										  </label>
+										  <small id="upload-msg" class="text-secondary font-weight-bold"></small>
+										</div>
+										<div class="col">
+										  <button id="posts-btn" class="btn btn-yellowLab rounded-corners float-right" disabled>Compartir</button>                      
+										</div>
+									  </div>
+									</form>
+								  </div>
+								</div>
+						</div>
+						<!-- fin de post con firebase  -->
+
+						</div>	
+					</div>	
+				</div>	
+				<!-- seccion donde se reciben la publicaciones  -->
+				<section class="container mb-4"> 
+					<div class="row">
+					  <div id="posts-container" class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0"></div>
+					</div>
+				  </section>
+	
+				<!-- NO borraar!! Publicacion#1-->
+				<div class="publicacion">
+					<!-- Publicacion -->
+					<div class="row">
+						<div class="col-auto foto">
+							<a href="#">
+								<img src="img/persona5.jpg" alt="">
+							</a>
+						</div>
+
+						<div class="col">
+							<div class="post">
+								<a href="#" class="nombre">Andrea Lorem Ipsum</a>
+								<p class="texto">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat.
+								</p>
+								<div class="caja-botones d-flex justify-content-between align-items-center">
+									<button><i class="icon-thumbs-up"></i></button>
+									<p>15 <i class="icon-thumbs-up"></i></p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Comentarios -->
+					<div class="row">
+						<div class="col-10 offset-2">
+							<div class="comentarios">
+								<div class="row comentario no-gutters">
+									<div class="col-auto foto">
+										<a href="#">
+											<img src="img/persona2.jpg" alt="">
+										</a>
+									</div>
+									<div class="col">
+										<form action="">
+											<textarea name="" id="" placeholder="Comentario"></textarea>
+										</form>
+									</div>
+								</div>
+
+								<div class="row comentario no-gutters ">
+									<div class="col-auto foto">
+										<a href="#">
+											<img src="img/persona2.jpg" alt="">
+										</a>
+									</div>
+									<div class="col">
+										<p class="respuesta">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, eum.
+										</p>
+										<a href="#" class="me-gusta">Me gusta</a>
+									</div>
+								</div>
+
+								<div class="row comentario no-gutters ">
+									<div class="col-auto foto">
+										<a href="#">
+											<img src="img/persona5.jpg" alt="">
+										</a>
+									</div>
+									<div class="col">
+										<p class="respuesta">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque totam rem explicabo beatae tenetur iste perspiciatis culpa quam asperiores saepe!
+										</p>
+										<a href="#" class="me-gusta">Me gusta</a>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Publicacion #2 -->
+				<div class="publicacion">
+					<!-- Publicacion -->
+					<div class="row">
+						<div class="col-auto foto">
+							<a href="#">
+								<img src="img/persona1.jpg" alt="">
+							</a>
+						</div>
+
+						<div class="col">
+							<div class="post">
+								<a href="#" class="nombreProductor">José [Productor -Papas-]</a>
+								<div class="imagen ">
+									<div class = "nombre">
+									<p>Desde el Campo a Su Mesa </p>
+									<p>4kx1000,Precio Por Saco,Despacho a Domicilio</p>
+									</div>
+
+									<img src="img/paisaje1.jpg" alt="">
+								</div>
+								<div class="caja-botones d-flex justify-content-between align-items-center">
+									<button><i class="icon-thumbs-up"></i></button>
+									<p>15 <i class="icon-thumbs-up"></i></p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Comentarios -->
+					<div class="row">
+						<div class="col-10 offset-2">
+							<div class="comentarios">
+								<div class="row comentario no-gutters ">
+									<div class="col-auto foto">
+										<a href="#">
+											<img src="img/persona2.jpg" alt="">
+										</a>
+										
+									</div>
+									<div class="col">
+										<form action="">
+											<textarea name="" id="" placeholder="Comentario"></textarea>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Publicacion #3 -->
+				<div class="publicacion">
+					<!-- Publicacion -->
+					<div class="row">
+						<div class="col-auto foto">
+							<a href="#">
+								<img src="img/persona4.jpg" alt="">
+							</a>
+						</div>
+
+						<div class="col">
+							<div class="post">
+								<a href="#" class="nombre">Alejandro Lorem Ipsum</a>
+								<div class="imagen">
+									<img src="img/paisaje2.jpg" alt="">
+								</div>
+								<div class="caja-botones d-flex justify-content-between align-items-center">
+									<button><i class="icon-thumbs-up"></i></button>
+									<p>15 <i class="icon-thumbs-up"></i></p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Comentarios -->
+					<div class="row">
+						<div class="col-10 offset-2">
+							<div class="comentarios">
+								<div class="row comentario no-gutters ">
+									<div class="col-auto foto">
+										<a href="#">
+											<img  id="imagenDePerfil"src="img/persona2.jpg" alt="">
+										</a>
+									</div>
+									<div class="col">
+										<form action="">
+											<textarea name="" id="" placeholder="Comentario"></textarea>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-3 barra-lateral-derecha hidden-md-down">	
+				<h3>Publicidad</h3>	
+				<div class="ads">	
+					<a href="#"><img src="img/ad1.jpg" width="300" alt=""></a>	
+					<a href="#"><img src="img/ad2.jpg" width="300" alt=""></a>	
+					<a href="#"><img src="img/ad3.jpg" width="300" alt=""></a>	
+				</div>	
+	
+				<footer>	
+					<a href="#">Privacidad</a>	
+					<a href="#">Condiciones</a>	
+					<a href="#">Publicidad</a>	
+					<p class="copyright">Red Social-TRABÚN © 2018</p>	
+				</footer>	
+			</div>	
+		</div>	
+	</main>	
+	
+	<!-- conexion a Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+	<script>
+	//creando archivo común para no sobreescribir lo mismo en cada html
+	var config = {
+    apiKey: "AIzaSyAWALtnmZiS_d4KhjIc79op-M8D4KDYNLo",
+    authDomain: "trabun-socialmedia.firebaseapp.com",
+    databaseURL: "https://trabun-socialmedia.firebaseio.com",
+    projectId: "trabun-socialmedia",
+    storageBucket: "trabun-socialmedia.appspot.com",
+    messagingSenderId: "85322774721"
+	};
+	firebase.initializeApp(config);
+	</script>	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="js/mainv2.js"></script>
+	<script src="js/menu.js"></script>	
+</body>	
+</html> 

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trabún-RedSocial</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <div class="login-form">
+        <form id= "formLogin" action="/examples/actions/confirmation.php" method="post">
+            <div id="centrador">
+                <img id="imagen" src="/img/logo.png">
+            </div>
+
+            <h4 class="text-center">T r a b ú n </h4>
+            <div class="text-center social-btn">
+                <a onclick="signInWithFacebook()" class="btn btn-primary btn-block">
+                    <i class="fa fa-facebook"></i> Ingresa con
+                    <b>Facebook</b>
+                </a>
+                <a onclick="signInWithGoogle()" class="btn btn-danger btn-block">
+                    <i class="fa fa-google"></i> Ingresa con
+                    <b>Google</b>
+                </a>
+            </div>
+            <div class="or-seperator">
+                <i>o ingresa con email</i>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="fa fa-user"></i>
+                    </span>
+                    <input type="email" class="form-control" id="email1" placeholder="email@ejemplo.com" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Aquí tu e-mail." required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="fa fa-lock"></i>
+                    </span>
+                    <input type="password" class="form-control" id="password1" placeholder="Ingresa Password" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Aquí tu contraseña." required>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success btn-block login-btn" onclick="signIn()">Ingresa</button>
+                <div class="or-seperator">
+                    <i>Eres nuevo por aquí?</i>
+                    <a href="registro.html" class="btn btn-success btn-block login-btn" >Registrate</a>
+                </div>
+            </div>
+            <div class="clearfix">
+                <label class="pull-left checkbox-inline">
+                    <input type="checkbox"> Recuerdame</label>
+                <a href="#" class="pull-right text-success" onclick="sendPasswordResetEmail()">Olvidaste tu Contraseña?</a>
+            </div>
+
+        </form>
+
+    </div>
+
+    <!-- conexion a Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script>
+        var config = {
+      apiKey: "AIzaSyAWALtnmZiS_d4KhjIc79op-M8D4KDYNLo",
+      authDomain: "trabun-socialmedia.firebaseapp.com",
+      databaseURL: "https://trabun-socialmedia.firebaseio.com",
+      projectId: "trabun-socialmedia",
+      storageBucket: "trabun-socialmedia.appspot.com",
+      messagingSenderId: "85322774721"
+        };
+        firebase.initializeApp(config);
+    </script> 
+    <script src="js/loginv2.js"></script>
+    
+    
+  
+</body>
+
+</html>
