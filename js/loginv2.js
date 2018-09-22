@@ -7,7 +7,7 @@ function signIn(){
   .then(function(){
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
-        window.location.href = 'main.html';
+        window.location.href = '';
       }
     });
   })
