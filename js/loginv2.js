@@ -33,7 +33,7 @@ function signInWithGoogle(){
             uid: user.uid,
             profilePhoto: user.photoURL
           }).then(user => {
-            window.location.href = 'main.html';
+            window.location.href = 'index.html';
           });
        
       }).catch(function(error) {
@@ -59,7 +59,7 @@ function signInWithFacebook(){
         // The signed-in user info.
         var user = result.user;
       }).then(user => {
-        window.location.href = 'main.html';
+        window.location.href = 'index.html';
       }).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
